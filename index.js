@@ -3,8 +3,6 @@ consoleText(['Korm Taiyi', 'Frontend developer',], 'text',['tomato','rebeccapurp
 
 function consoleText(words, id, colors) {
   if (colors === undefined) colors = ['#fff'];
-  var visible = true;
-  var con = document.getElementById('console');
   var letterCount = 1;
   var x = 1;
   var waiting = false;
@@ -37,15 +35,4 @@ function consoleText(words, id, colors) {
       letterCount += x;
     }
   }, 120)
-  window.setInterval(function() {
-    if (visible === true) {
-      con.className = 'console-underscore hidden'
-      visible = false;
-
-    } else {
-      con.className = 'console-underscore'
-
-      visible = true;
-    }
-  }, 400)
 }
